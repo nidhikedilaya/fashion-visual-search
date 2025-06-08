@@ -9,8 +9,8 @@ This project implements a fashion image similarity search system using deep lear
 ├── Images/                  # Sample images for testing
 ├── app.py                  # Main Streamlit application
 ├── precompute_vectors.py   # Script to generate image embeddings
-├── vectors.npy            # Pre-computed image feature vectors
-├── urls.npy               # Corresponding image URLs
+├── vectors.npy            # Pre-computed image feature vectors (generated locally)
+├── urls.npy               # Corresponding image URLs (generated locally)
 ├── dresses_bd_processed_data.csv  # Dresses dataset
 ├── jeans_bd_processed_data.csv    # Jeans dataset
 └── requirements.txt        # Project dependencies
@@ -46,9 +46,9 @@ pip install -r requirements.txt
 
 ## Usage
 
-### Precomputing Vectors
+### Generating Feature Vectors
 
-Before running the main application, you need to generate the image feature vectors:
+Before running the main application, you need to generate the image feature vectors. The large data files (`vectors.npy` and `urls.npy`) are not included in the repository due to size limitations. You'll need to generate them locally:
 
 ```bash
 python precompute_vectors.py
@@ -58,8 +58,10 @@ This script will:
 
 - Load the ResNet50 model
 - Process all images from the datasets
-- Generate and save feature vectors to `vectors.npy`
-- Save corresponding URLs to `urls.npy`
+- Generate and save feature vectors to `vectors.npy` (approximately 273MB)
+- Save corresponding URLs to `urls.npy` (approximately 8MB)
+
+Note: This process might take some time depending on your hardware. A GPU is recommended for faster processing.
 
 ### Running the Application
 
