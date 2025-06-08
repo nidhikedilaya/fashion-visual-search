@@ -34,8 +34,8 @@ This project implements a fashion image similarity search system using deep lear
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
-cd <repository-name>
+git clone https://github.com/nidhikedilaya/fashion-visual-search.git
+cd https://github.com/nidhikedilaya/fashion-visual-search.git
 ```
 
 2. Install the required dependencies:
